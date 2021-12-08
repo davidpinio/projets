@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit un Article{% endblock %}
+
+{% block body %}
+    <h1>Editer un Article</h1>
+
+    {{ form_start(form)}}
+
+    {{ include('article/_form.html.twig', {'button_label': 'Modifier'}) }}
+
+    <a href="{{ path('article_index') }}"><i class="fa fa-reply"></i>Retour</a>
+
+    {{ include('article/_delete_form.html.twig') }}
+    {{ form_start(form)}}
+{% endblock %}
